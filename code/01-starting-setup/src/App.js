@@ -16,8 +16,9 @@ function App() {
       <h2>Let's get started!</h2>
       {/* <ExpenseItem name={expenses[0].name} date={expenses[0].date}/>
       <ExpenseItem name={expenses[1].name} date={expenses[0].date}/> */}
-      {/* <Expenses items={expenses}/> */}
+
       <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses}/>
     </div>
   );
 }
