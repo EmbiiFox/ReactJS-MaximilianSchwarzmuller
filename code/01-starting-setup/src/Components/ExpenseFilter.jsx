@@ -5,6 +5,7 @@ export default function ExpenseFilter(props) {
     console.log(e.target.value);
     props.onChangeFilter(e.target.value);
   };
+
   return (
     <>
       <div className="expenses-filter">
