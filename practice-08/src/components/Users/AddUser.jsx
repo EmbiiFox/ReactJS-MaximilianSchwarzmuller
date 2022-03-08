@@ -34,10 +34,17 @@ export default function AddUser(props) {
   const ageChangeHandler = (e) => {
     setEnteredAge(e.target.value);
   };
+  const errorHandler = () => {
+    setError(null);
+  };
   return (
     <>
       {error && (
-        <ErrorModal title="An error occured!" message="Something went wrong!" />
+        <ErrorModal
+          title={error.title}
+          message={error.message}
+          onConfirm={errorHandler}
+        />
       )}
       <Card cssCard={classes.input}>
         <form onSubmit={addUserHandler}>
